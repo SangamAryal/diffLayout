@@ -1,18 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:layout_marginTop="120dp"
-    android:orientation="vertical"
-    android:id="@+id/main"
     android:padding="20dp">
 
     <TextView
         android:id="@+id/textView"
+        android:layout_marginTop="40dp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
         android:text="Hello"
-        android:layout_gravity="center"
         android:textSize="40sp"
         android:textStyle="bold" />
 
@@ -20,7 +20,8 @@
         android:id="@+id/textView2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_gravity="center"
+        android:layout_below="@id/textView"
+        android:layout_centerHorizontal="true"
         android:layout_marginTop="20dp"
         android:text="Sign in to your account"
         android:textSize="16sp" />
@@ -29,43 +30,46 @@
         android:id="@+id/editTextTextEmailAddress"
         android:layout_width="match_parent"
         android:layout_height="48dp"
+        android:layout_below="@id/textView2"
+        android:layout_marginHorizontal="5dp"
         android:layout_marginTop="50dp"
-        android:elevation="2dp"
         android:background="@drawable/back"
         android:drawableLeft="@drawable/email"
         android:drawablePadding="10dp"
+        android:elevation="2dp"
         android:ems="10"
-        android:layout_marginHorizontal="5dp"
-        android:shadowColor="@color/black"
         android:hint="Email"
         android:inputType="textEmailAddress"
         android:padding="7dp"
+        android:shadowColor="@color/black"
         android:textSize="14sp" />
 
     <EditText
         android:id="@+id/editTextTextPassword"
         android:layout_width="match_parent"
         android:layout_height="48dp"
+        android:layout_below="@id/editTextTextEmailAddress"
+        android:layout_marginHorizontal="5dp"
         android:layout_marginTop="16dp"
         android:background="@drawable/back"
-        android:elevation="2dp"
-        android:layout_marginHorizontal="5dp"
-        android:shadowColor="@color/black"
         android:drawableLeft="@drawable/password"
-        android:drawablePadding="10dp"
         android:drawableRight="@drawable/hide"
+        android:drawablePadding="10dp"
+        android:elevation="2dp"
         android:ems="10"
         android:hint="Password"
         android:inputType="textPassword"
         android:padding="7dp"
+        android:shadowColor="@color/black"
         android:textSize="14sp" />
 
     <TextView
         android:id="@+id/textView3"
-        android:layout_marginTop="30dp"
-        android:layout_gravity="center"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_below="@id/editTextTextPassword"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
         android:text="Forgot Password?"
         android:textColor="@color/grey"
         android:textSize="12sp" />
@@ -74,36 +78,32 @@
         android:id="@+id/buttonForward"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="80dp"
+        android:layout_below="@id/textView3"
+        android:layout_centerHorizontal="true"
         android:layout_marginHorizontal="5dp"
-        android:layout_gravity="center"
+        android:layout_marginTop="80dp"
+        android:layout_marginBottom="30dp"
         android:background="@drawable/back"
         android:text="Sign in"
         android:textColor="@android:color/white"
         android:textSize="16sp"
         android:textStyle="bold" />
 
-    <LinearLayout
-        android:layout_width="match_parent"
+    <TextView
+        android:id="@+id/textView5"
+        android:layout_below="@+id/buttonForward"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:layout_marginTop="90dp"
-        android:gravity="center">
+        android:layout_centerHorizontal="true"
+        android:text="Don't have an account?" />
 
-        <TextView
-            android:id="@+id/textView5"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Don't have an account?"
-            android:layout_marginEnd="8dp" />
+    <TextView
+        android:id="@+id/create_acc"
+        android:layout_below="@+id/buttonForward"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toEndOf="@id/textView5"
+        android:text="@string/create"
+        android:textStyle="bold" />
 
-        <TextView
-            android:id="@+id/create_acc"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/create"
-            android:textStyle="bold" />
-    </LinearLayout>
-
-
-</LinearLayout>
+</RelativeLayout>
