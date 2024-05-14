@@ -1,14 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/main"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:layout_marginTop="40dp"
     android:layout_marginHorizontal="15dp"
-    android:layout_marginTop="50dp"
-    app:layout_constraintTop_toBottomOf="@+id/textView8"
-    tools:layout_editor_absoluteX="15dp">
+    android:layout_gravity="center"
+    android:id="@+id/main"
+    android:padding="15dp">
 
     <TextView
         android:id="@+id/SignUP"
@@ -17,133 +16,105 @@
         android:text="Create Your Account"
         android:textSize="32sp"
         android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.051" />
-
-    <androidx.constraintlayout.widget.Guideline
-        android:id="@+id/guideline_vertical"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="vertical"
-        app:layout_constraintGuide_percent="0.0" />
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="30dp" />
 
     <EditText
         android:id="@+id/email"
-        android:layout_width="363dp"
+        android:layout_width="match_parent"
         android:layout_height="48dp"
-        android:layout_marginTop="32dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginHorizontal="2dp"
         android:background="@drawable/back"
+        android:padding="10dp"
         android:drawableLeft="@drawable/email"
         android:drawablePadding="10dp"
-        android:elevation="3dp"
         android:ems="10"
+        android:shadowColor="@color/black"
+        android:elevation="2dp"
         android:hint="Email"
         android:inputType="textEmailAddress"
-        android:padding="7dp"
-        android:textSize="14sp"
-        app:layout_constraintEnd_toEndOf="@+id/password"
-        app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toStartOf="@+id/password"
-        app:layout_constraintTop_toBottomOf="@+id/password" />
+        android:textSize="14sp" />
 
     <EditText
         android:id="@+id/password"
-        android:layout_width="363dp"
+        android:layout_width="match_parent"
         android:layout_height="48dp"
-        android:layout_marginTop="32dp"
+        android:padding="10dp"
+        android:shadowColor="@color/black"
+        android:layout_marginTop="25dp"
+        android:layout_marginHorizontal="2dp"
         android:background="@drawable/back"
         android:drawableLeft="@drawable/password"
         android:drawablePadding="10dp"
-        android:elevation="3dp"
         android:ems="10"
+        android:elevation="2dp"
         android:hint="Password"
         android:inputType="textPassword"
-        android:padding="7dp"
-        android:textSize="14sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/username" />
+        android:textSize="14sp" />
 
     <EditText
         android:id="@+id/username"
-        android:layout_width="363dp"
+        android:layout_width="match_parent"
         android:layout_height="48dp"
-        android:layout_marginTop="28dp"
+        android:padding="10dp"
+        android:layout_marginTop="25dp"
+        android:elevation="2dp"
+        android:layout_marginHorizontal="2dp"
         android:background="@drawable/back"
         android:drawableLeft="@drawable/user"
+        android:shadowColor="@color/black"
         android:drawablePadding="10dp"
-        android:elevation="3dp"
         android:ems="10"
         android:hint="Username"
         android:inputType="text"
-        android:padding="7dp"
-        android:textSize="14sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/SignUP" />
+        android:textSize="14sp" />
 
     <EditText
         android:id="@+id/mobile"
-        android:layout_width="363dp"
+        android:layout_width="match_parent"
         android:layout_height="48dp"
-        android:layout_marginTop="28dp"
+        android:padding="10dp"
+        android:layout_marginHorizontal="2dp"
+        android:layout_marginTop="25dp"
         android:background="@drawable/back"
         android:drawableLeft="@drawable/mobile"
         android:drawablePadding="10dp"
-        android:elevation="3dp"
         android:ems="10"
         android:hint="Mobile"
+        android:elevation="2dp"
         android:inputType="number"
-        android:padding="7dp"
-        android:textSize="14sp"
-        app:layout_constraintEnd_toEndOf="@+id/email"
-        app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toStartOf="@+id/email"
-        app:layout_constraintTop_toBottomOf="@+id/email" />
+        android:shadowColor="@color/black"
+        android:textSize="14sp" />
 
     <Button
         android:id="@+id/button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="140dp"
+        android:layout_marginTop="70dp"
         android:background="@drawable/back"
         android:text="Sign Up"
+        android:layout_gravity="center"
         android:textColor="@android:color/white"
         android:textSize="16sp"
-        android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/mobile" />
+        android:textStyle="bold" />
 
     <TextView
         android:id="@+id/textView7"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="44dp"
+        android:layout_marginTop="80dp"
         android:text="or create account using social media"
         android:textSize="12sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="@+id/guideline_vertical"
-        app:layout_constraintTop_toBottomOf="@+id/button" />
+        android:layout_gravity="center_horizontal" />
 
     <LinearLayout
         android:id="@+id/linear_layout"
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
-        android:gravity="center"
         android:orientation="horizontal"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView7">
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="20dp">
 
         <ImageView
             android:layout_width="40dp"
@@ -177,9 +148,6 @@
             android:focusable="true"
             android:padding="6dp"
             android:src="@drawable/google" />
-
-
     </LinearLayout>
 
-
-</androidx.constraintlayout.widget.ConstraintLayout>
+</LinearLayout>
