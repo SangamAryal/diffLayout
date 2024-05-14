@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">DiffLayouts</string>
+    <string name="create"><u>Create</u></string>
+    <string name="sign_in">Sign in</string>
+</resources>
