@@ -111,7 +111,7 @@
         android:id="@+id/button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="140dp"
+        android:layout_marginTop="100dp"
         android:background="@drawable/back"
         android:text="Sign Up"
         android:textColor="@android:color/white"
@@ -133,53 +133,50 @@
         app:layout_constraintStart_toStartOf="@+id/guideline_vertical"
         app:layout_constraintTop_toBottomOf="@+id/button" />
 
-    <LinearLayout
-        android:id="@+id/linear_layout"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
-        android:gravity="center"
-        android:orientation="horizontal"
+
+    <ImageView
+        android:id="@+id/imageView4"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="112dp"
+        android:layout_marginTop="16dp"
+        android:background="@drawable/circular_background"
+        android:clickable="true"
+        android:elevation="2dp"
+        android:focusable="true"
+        android:padding="6dp"
+        android:src="@drawable/facebook"
+        app:layout_constraintStart_toStartOf="@+id/guideline_vertical"
+        app:layout_constraintTop_toBottomOf="@+id/textView7" />
+
+    <ImageView
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="16dp"
+        android:background="@drawable/circular_background"
+        android:clickable="true"
+        android:elevation="2dp"
+        android:focusable="true"
+        android:padding="6dp"
+        android:src="@drawable/twitter"
+        app:layout_constraintEnd_toStartOf="@+id/imageView5"
+        app:layout_constraintStart_toEndOf="@+id/imageView4"
+        app:layout_constraintTop_toBottomOf="@+id/textView7" />
+
+    <ImageView
+        android:id="@+id/imageView5"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="108dp"
+        android:background="@drawable/circular_background"
+        android:clickable="true"
+        android:elevation="2dp"
+        android:focusable="true"
+        android:padding="6dp"
+        android:src="@drawable/google"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView7">
-
-        <ImageView
-            android:layout_width="40dp"
-            android:layout_height="40dp"
-            android:layout_marginEnd="10dp"
-            android:background="@drawable/circular_background"
-            android:clickable="true"
-            android:elevation="2dp"
-            android:focusable="true"
-            android:padding="6dp"
-            android:src="@drawable/facebook" />
-
-        <ImageView
-            android:layout_width="40dp"
-            android:layout_height="40dp"
-            android:layout_marginEnd="10dp"
-            android:background="@drawable/circular_background"
-            android:clickable="true"
-            android:elevation="2dp"
-            android:focusable="true"
-            android:padding="6dp"
-            android:src="@drawable/twitter" />
-
-        <ImageView
-            android:layout_width="40dp"
-            android:layout_height="40dp"
-            android:layout_marginEnd="10dp"
-            android:background="@drawable/circular_background"
-            android:clickable="true"
-            android:elevation="2dp"
-            android:focusable="true"
-            android:padding="6dp"
-            android:src="@drawable/google" />
-
-
-    </LinearLayout>
+        app:layout_constraintTop_toBottomOf="@+id/textView7" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
